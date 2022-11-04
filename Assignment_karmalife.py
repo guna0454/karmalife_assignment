@@ -31,7 +31,7 @@ def _map_collections():
             # 3. After mapping create two dataframes using pandas one with movies_with_comments and movies_without_comments.csv files under movies dir.
                     #reference: https://www.javatpoint.com/how-to-create-a-dataframes-in-python
                     
-    #<Source code here>                
+
 def _add_columns_to_dataframe():
             #Function-2
             # 1. Add two more cloumns to the "movies_with_comments" dataframe called "low_runtime" and "high_runtime"
