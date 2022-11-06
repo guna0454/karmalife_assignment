@@ -1,0 +1,2 @@
+,address.street1,address.city,address.state,address.zipcode,geo.type,geo.coordinates
+0,340 W Market,Bloomington,MN,55425,Point,"[-93.24565, 44.85466]"

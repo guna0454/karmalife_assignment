@@ -1,0 +1,4 @@
+python=3.9.5
+pip=22.3
+pymongo=4.3.2
+pandas=1.5.1
