@@ -28,7 +28,6 @@ def conn_mongo_map():
     if not os.path.exists(path):
         os.makedirs(path)
 
-    #Path(path).mkdir(parents=True, exist_ok=True)
     
     function1_lookup_comments = {
        "$lookup": {
@@ -69,24 +68,24 @@ def conn_mongo_map():
        
 def get_rating_released_after2k():
        
-#    match_imdb_rating = {
-#        "$match": {
-#            "imdb": {
-#                "rating": {
-#                    "$gt": 8,
-#                }
-#            }
-#        }
-#    }
+    match_imdb_rating = {
+        "$match": {
+            "imdb": {
+                "rating": {
+                    "$gt": 8,
+                }
+            }
+        }
+    }
     
    
-#    match_year_on_or_before_2k = {
-#        "$match": {
-#            "year": {
-#                "$ge": 2000,
-#            }
-#        }
-#    }
+    match_year_on_or_before_2k = {
+        "$match": {
+            "year": {
+                "$ge": 2000,
+            }
+        }
+    }
     match_awards = {
         "$match": {
             "awards": {
@@ -103,8 +102,8 @@ def get_rating_released_after2k():
     
     
     pipeline = [
-#        match_imdb_rating,
-#        match_year_on_or_before_2k,
+        match_imdb_rating,
+        match_year_on_or_before_2k,
         match_awards,
         stage_sort_released_descending,
     ]
@@ -154,7 +153,7 @@ def theatre_col_rearrange():
     
 
 conn_mongo_map()
-#get_rating_released_after2k()
+get_rating_released_after2k()
 movies_outside_usa()
 theatre_col_rearrange()
 
