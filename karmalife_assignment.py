@@ -1,6 +1,3 @@
-## Developer: Prasad MC Nagendra
-## Date : 2022-05-11
-
 
 import pymongo
 from pymongo import MongoClient
