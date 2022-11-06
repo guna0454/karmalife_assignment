@@ -79,13 +79,13 @@ def get_rating_released_after2k():
     }
     
    
-    match_year_on_or_before_2k = {
-        "$match": {
-            "year": {
-                "$ge": 2000,
-            }
-        }
-    }
+#    match_year_on_or_before_2k = {
+#        "$match": {
+#            "year": {
+#                "$ge": 2000,
+#            }
+#        }
+#    }
     match_awards = {
         "$match": {
             "awards": {
@@ -103,7 +103,7 @@ def get_rating_released_after2k():
     
     pipeline = [
         match_imdb_rating,
-        match_year_on_or_before_2k,
+#        match_year_on_or_before_2k,
         match_awards,
         stage_sort_released_descending,
     ]
